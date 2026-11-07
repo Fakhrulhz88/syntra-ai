@@ -93,9 +93,9 @@ Point at the completion card:
 **Say:**
 > "Every question is tied to a learning objective. Feedback is immediate, and the explanation is generated with the question — this is formative assessment, not just a score."
 
-> **Time-saving option:** after two questions, click the exit icon in the HUD → **Keluar** to return to the library. The dashboard already contains 25 simulated students, so the analytics story still lands. If you want a real session on the board, finish all three levels (about 60 seconds with the correct answers) before opening the dashboard.
+> **Time-saving option:** after two questions, click the exit icon in the HUD → **Keluar sekarang** to return to the library. The dashboard already contains 25 simulated students, so the analytics story still lands. If you want a real session on the board, finish all three levels (about 60 seconds with the correct answers) before opening the dashboard.
 
-**Open the dashboard:** use the completion card's **Buka Dashboard** link, the game card in `/games`, or navigate directly to `/dashboard/demo-malacca` (or the generated id).
+**Open the dashboard:** use the completion card's **Papar Dashboard** link, the game card in `/games`, or navigate directly to `/dashboard/demo-malacca` (or the generated id).
 
 ---
 
@@ -150,7 +150,7 @@ Point and click:
 | Next level | Tahap seterusnya | Next level |
 | Finish game | Tamat | Finish |
 | Play again | Main lagi | Play again |
-| Dashboard | Buka Dashboard | Open Dashboard |
+| Dashboard | Papar Dashboard | View Dashboard |
 
 ## Timing summary
 
