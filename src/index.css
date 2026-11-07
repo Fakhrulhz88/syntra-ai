@@ -1,0 +1,140 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    color-scheme: dark;
+    --safe-bottom: env(safe-area-inset-bottom, 0px);
+  }
+
+  * {
+    -webkit-tap-highlight-color: transparent;
+  }
+
+  html {
+    scroll-behavior: smooth;
+  }
+
+  body {
+    @apply bg-abyss font-sans text-slate-100 antialiased;
+    background-image:
+      radial-gradient(ellipse 80% 50% at 50% -10%, rgba(34, 211, 238, 0.1), transparent),
+      radial-gradient(ellipse 60% 50% at 90% 20%, rgba(167, 139, 250, 0.08), transparent);
+    background-attachment: fixed;
+    min-height: 100dvh;
+  }
+
+  ::selection {
+    @apply bg-neon/30 text-white;
+  }
+
+  :focus-visible {
+    @apply outline-none ring-2 ring-neon/70 ring-offset-2 ring-offset-abyss;
+  }
+
+  ::-webkit-scrollbar {
+    width: 10px;
+    height: 10px;
+  }
+  ::-webkit-scrollbar-track {
+    background: #070b1d;
+  }
+  ::-webkit-scrollbar-thumb {
+    background: #232d55;
+    border-radius: 999px;
+    border: 2px solid #070b1d;
+  }
+  ::-webkit-scrollbar-thumb:hover {
+    background: #34406f;
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    html {
+      scroll-behavior: auto;
+    }
+    *,
+    *::before,
+    *::after {
+      animation-duration: 0.01ms !important;
+      animation-iteration-count: 1 !important;
+      transition-duration: 0.01ms !important;
+    }
+  }
+}
+
+@layer components {
+  .container-page {
+    @apply mx-auto w-full max-w-7xl px-5 sm:px-8 lg:px-10;
+  }
+
+  .glass {
+    @apply border border-white/[0.08] bg-white/[0.035] backdrop-blur-xl;
+  }
+
+  .card {
+    @apply relative overflow-hidden rounded-3xl border border-line/70 bg-panel/75 shadow-card backdrop-blur-sm;
+  }
+
+  .card-glow {
+    @apply card before:pointer-events-none before:absolute before:inset-x-0 before:top-0 before:h-px before:bg-gradient-to-r before:from-transparent before:via-neon/50 before:to-transparent;
+  }
+
+  .eyebrow {
+    @apply inline-flex items-center gap-2 rounded-full border border-neon/20 bg-neon/[0.07] px-3.5 py-1.5 text-[11px] font-semibold uppercase tracking-[0.18em] text-neon-soft;
+  }
+
+  .text-gradient {
+    @apply bg-gradient-to-r from-neon-soft via-neon to-plum bg-clip-text text-transparent;
+  }
+
+  .text-gradient-warm {
+    @apply bg-gradient-to-r from-gold via-[#ffd9a0] to-plum-soft bg-clip-text text-transparent;
+  }
+
+  .divider-glow {
+    @apply h-px w-full bg-gradient-to-r from-transparent via-line to-transparent;
+  }
+
+  .input-base {
+    @apply w-full rounded-xl border border-line bg-deep/80 px-4 py-3 text-sm text-slate-100 placeholder:text-slate-500 transition focus:border-neon/60 focus:bg-deep focus:outline-none focus:ring-2 focus:ring-neon/20;
+  }
+
+  .skeleton {
+    @apply animate-pulse rounded-xl bg-white/[0.06];
+  }
+
+  .songket-edge {
+    background-image:
+      linear-gradient(135deg, rgba(245, 196, 81, 0.7) 25%, transparent 25%),
+      linear-gradient(225deg, rgba(245, 196, 81, 0.7) 25%, transparent 25%);
+    background-size: 12px 12px;
+  }
+
+  .no-scrollbar::-webkit-scrollbar {
+    display: none;
+  }
+  .no-scrollbar {
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+  }
+
+  .safe-bottom {
+    padding-bottom: calc(1rem + var(--safe-bottom));
+  }
+}
+
+@layer utilities {
+  .mask-fade-b {
+    mask-image: linear-gradient(to bottom, black 70%, transparent 100%);
+  }
+  .mask-fade-x {
+    mask-image: linear-gradient(to right, transparent, black 8%, black 92%, transparent);
+  }
+  .text-balance {
+    text-wrap: balance;
+  }
+  .text-pretty {
+    text-wrap: pretty;
+  }
+}
