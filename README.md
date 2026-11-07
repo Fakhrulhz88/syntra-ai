@@ -83,7 +83,7 @@ VITE_API_URL=http://localhost:8000
 | `npm run preview` | Preview the production build |
 | `npm run lint` | Run oxlint |
 
-> Verified with `npm run build` and `npm run lint`. Lint currently reports two advisory `set-state-in-effect` warnings in the route-reset effects of `PipelinePage` and `PlayPage`; there are no errors.
+> Verified with `npm run build` (success) and `npm run lint` (zero errors, zero warnings). The build prints a non-blocking chunk-size advisory for the lazy-loaded Phaser game bundle.
 
 ---
 

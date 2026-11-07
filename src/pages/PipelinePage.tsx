@@ -104,6 +104,8 @@ export function PipelinePage() {
     let active = true
     const controller = new AbortController()
 
+    /* Reused route instance: reset all run state when the pipeline id changes. */
+    // oxlint-disable-next-line react/set-state-in-effect
     setPhase('loading')
     setEvents([])
     setStatuses(initialStatuses)

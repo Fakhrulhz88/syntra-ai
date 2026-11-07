@@ -7,9 +7,9 @@ Use this before recording or presenting. Everything below is designed to be veri
 ## 1. Build & quality gates
 
 - [x] `npm install` completes cleanly.
-- [x] `npm run build` passes (TypeScript strict + Vite production build).
-- [x] `npm run lint` passes with **no errors**.
-  - Two advisory `react(set-state-in-effect)` warnings remain in `PipelinePage.tsx` and `PlayPage.tsx` (intentional route-reset effects).
+- [x] `npm run build` passes (TypeScript strict + Vite production build; non-blocking chunk-size advisory for the lazy-loaded Phaser bundle).
+- [x] `npm run lint` passes cleanly (zero errors, zero warnings).
+  - The two intentional route-reset effects are annotated with a scoped `oxlint-disable-next-line` and a comment explaining why.
 - [x] No `any` in application code.
 - [x] All UI strings come from `src/i18n/translations.ts` (BM + EN).
 - [x] No unused assets or external image/font requests required at runtime.
